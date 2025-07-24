@@ -10,7 +10,7 @@
         /* Menggunakan font Inter */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f0f0f0; /* Warna latar belakang yang lembut */
+            background-color: #f0f0f0; /* Warna latar belakang yang lembut (abu doff dasar) */
             color: #333; /* Warna teks utama */
             overflow-x: hidden;
         }
@@ -138,64 +138,69 @@
         </div>
     </nav>
 
-    <!-- Main Content Area -->
-    <main class="flex-1 flex flex-col lg:flex-row items-center lg:items-stretch justify-center p-4 md:p-8 relative">
-        <!-- Left Section: Text Content -->
-        <section class="flex-1 flex flex-col justify-center items-center lg:items-start text-center lg:text-left p-6 md:p-10 max-w-xl lg:max-w-2xl animate-fadeIn delay-200">
-            <h1 class="text-6xl md:text-7xl lg:text-8xl font-extrabold text-gray-900 mb-4 tracking-tight">
-                MAKI<span class="text-gray-400">MA</span>
-            </h1>
-            <p class="text-lg md:text-xl text-gray-700 mb-4 leading-relaxed">
-                She is the leader of the Public Safety Devil Hunter organization, or is she?
-            </p>
-            <p class="text-base md:text-lg text-gray-600 mb-6 leading-relaxed">
-                She is the leader of the Public Safety Devil Hunter organization who takes Denji under her wing, giving him a happy life. Initially acting as a helpful ally, she is later revealed to be a powerful...
-            </p>
-            <a href="https://instagram.com/makima_official" target="_blank" class="text-blue-600 hover:underline mb-8">
-                https://instagram.com/makima_official
-            </a>
-            <p class="signature-text">
-                Makima
-            </p>
+    <!-- Wrapper untuk Kotak Putih Besar -->
+    <div class="flex-1 flex items-center justify-center p-4 md:p-8">
+        <div class="w-full max-w-screen-xl bg-white rounded-xl shadow-lg flex flex-col lg:flex-row overflow-hidden">
+            <!-- Main Content Area (dipindahkan ke dalam kotak putih) -->
+            <main class="flex-1 flex flex-col lg:flex-row items-center lg:items-stretch justify-center p-4 md:p-8 relative">
+                <!-- Left Section: Text Content -->
+                <section class="flex-1 flex flex-col justify-center items-center lg:items-start text-center lg:text-left p-6 md:p-10 max-w-xl lg:max-w-2xl animate-fadeIn delay-200">
+                    <h1 class="text-6xl md:text-7xl lg:text-8xl font-extrabold text-gray-900 mb-4 tracking-tight">
+                        MAKI<span class="text-gray-400">MA</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-700 mb-4 leading-relaxed">
+                        She is the leader of the Public Safety Devil Hunter organization, or is she?
+                    </p>
+                    <p class="text-base md:text-lg text-gray-600 mb-6 leading-relaxed">
+                        She is the leader of the Public Safety Devil Hunter organization who takes Denji under her wing, giving him a happy life. Initially acting as a helpful ally, she is later revealed to be a powerful...
+                    </p>
+                    <a href="https://instagram.com/makima_official" target="_blank" class="text-blue-600 hover:underline mb-8">
+                        https://instagram.com/makima_official
+                    </a>
+                    <p class="signature-text">
+                        Makima
+                    </p>
 
-            <div class="flex flex-col sm:flex-row gap-4 mt-8">
-                <button class="bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out">
-                    WATCH ANIME
-                </button>
-                <button class="bg-white border-2 border-gray-300 hover:border-gray-400 text-gray-800 font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out">
-                    READ MANGA
-                </button>
-            </div>
+                    <div class="flex flex-col sm:flex-row gap-4 mt-8">
+                        <button class="bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out">
+                            WATCH ANIME
+                        </button>
+                        <button class="bg-white border-2 border-gray-300 hover:border-gray-400 text-gray-800 font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out">
+                            READ MANGA
+                        </button>
+                    </div>
 
-            <div class="text-xs text-gray-400 mt-12">
-                drewstkzy on pinterest
-            </div>
-        </section>
+                    <div class="text-xs text-gray-400 mt-12">
+                        drewstkzy on pinterest
+                    </div>
+                </section>
 
-        <!-- Right Section: Image -->
-        <section class="flex-1 flex items-center justify-center p-6 md:p-10 animate-fadeIn delay-400">
-            <div class="relative w-full max-w-md lg:max-w-none lg:w-[600px] h-[400px] md:h-[500px] lg:h-[700px] bg-gray-300 rounded-xl overflow-hidden shadow-2xl">
-                <!-- Placeholder untuk gambar karakter -->
-                <img src="https://placehold.co/600x700/e0e0e0/555555?text=Gambar+Karakter" alt="Gambar Karakter" class="w-full h-full object-cover">
+                <!-- Right Section: Image -->
+                <section class="flex-1 flex items-center justify-center p-6 md:p-10 animate-fadeIn delay-400">
+                    <div class="relative w-full max-w-md lg:max-w-none lg:w-[600px] h-[400px] md:h-[500px] lg:h-[700px] bg-gray-300 rounded-xl overflow-hidden shadow-2xl">
+                        <!-- Placeholder untuk gambar karakter -->
+                        <img src="https://placehold.co/600x700/e0e0e0/555555?text=Gambar+Karakter" alt="Gambar Karakter" class="w-full h-full object-cover">
 
-                <!-- Teks "CHAINSAW MAN" di pojok kanan bawah -->
-                <div class="absolute bottom-4 right-4 text-right">
-                    <p class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-300 opacity-70 leading-none">CHAINSAW</p>
-                    <p class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-300 opacity-70 leading-none">MAN</p>
+                        <!-- Teks "CHAINSAW MAN" di pojok kanan bawah -->
+                        <div class="absolute bottom-4 right-4 text-right">
+                            <p class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-300 opacity-70 leading-none">CHAINSAW</p>
+                            <p class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-300 opacity-70 leading-none">MAN</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Vertical Dots -->
+                <div class="vertical-dots hidden lg:flex animate-fadeIn delay-600">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Vertical Dots -->
-        <div class="vertical-dots hidden lg:flex animate-fadeIn delay-600">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
+            </main>
         </div>
-    </main>
+    </div>
 
     <script>
         // JavaScript untuk fungsionalitas Navbar Bubble
