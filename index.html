@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Ranni - Halaman Utama</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Menggunakan font Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8; /* Warna latar belakang lembut */
+            color: #333; /* Warna teks utama */
+            overflow-x: hidden; /* Mencegah scrolling horizontal */
+        }
+        /* Styling untuk sidebar minimalis */
+        .sidebar-line {
+            width: 4px; /* Lebar garis sidebar */
+            height: 80%; /* Tinggi garis sidebar, bisa disesuaikan */
+            background-color: #a0a0a0; /* Warna garis abu-abu */
+            border-radius: 2px; /* Sudut membulat */
+        }
+        /* Animasi sederhana untuk teks */
+        @keyframes fadeInSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fadeInSlideUp {
+            animation: fadeInSlideUp 0.8s ease-out forwards;
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+
+        /* Styling untuk Navbar Bubble */
+        .navbar-bubble {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #ffffff;
+            border-radius: 9999px; /* Bentuk bubble */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease-in-out; /* Transisi untuk semua properti */
+            overflow: hidden; /* Penting untuk efek bubble */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem; /* Padding awal untuk tombol toggle */
+            width: 60px; /* Lebar awal untuk tombol toggle */
+            height: 60px; /* Tinggi awal untuk tombol toggle */
+        }
+
+        .navbar-bubble.open {
+            width: auto; /* Lebar otomatis saat terbuka */
+            height: auto; /* Tinggi otomatis saat terbuka */
+            padding: 1rem 2rem; /* Padding lebih besar saat terbuka */
+            border-radius: 1.5rem; /* Sedikit kurang bulat saat terbuka untuk menampung teks */
+        }
+
+        .navbar-bubble .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            opacity: 0;
+            max-width: 0; /* Awalnya sembunyikan link */
+            transition: opacity 0.3s ease-in-out, max-width 0.4s ease-in-out;
+            white-space: nowrap; /* Pastikan teks tidak pecah */
+        }
+
+        .navbar-bubble.open .nav-links {
+            opacity: 1;
+            max-width: 500px; /* Cukup lebar untuk menampung link */
+        }
+
+        .navbar-bubble .toggle-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px; /* Ukuran tombol toggle */
+            height: 48px;
+            border-radius: 9999px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-bubble .toggle-button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .navbar-bubble.open .toggle-button {
+            margin-right: 1rem; /* Jarak antara tombol dan link saat terbuka */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <!-- Navbar Bubble -->
+    <nav id="mainNavbar" class="navbar-bubble">
+        <button id="navbarToggle" class="toggle-button">
+            <!-- Ikon Hamburger (bisa diganti SVG atau Font Awesome) -->
+            ☰
+        </button>
+        <div class="nav-links">
+            <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Halaman Utama</a>
+            <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Tentang Saya</a>
+            <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Proyek</a>
+        </div>
+    </nav>
+
+    <div class="relative w-full max-w-6xl bg-white rounded-xl shadow-lg flex flex-col lg:flex-row overflow-hidden">
+        <!-- Sidebar Minimalis -->
+        <div class="sidebar-line absolute left-4 top-1/2 -translate-y-1/2 hidden lg:block"></div>
+
+        <!-- Konten Utama Halaman Banner -->
+        <div class="flex-1 p-8 lg:p-16 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
+            <!-- Logo (Placeholder) -->
+            <div class="mb-4 animate-fadeInSlideUp delay-100">
+                <div class="text-2xl font-bold text-gray-700">LOGO</div>
+            </div>
+
+            <!-- Nama -->
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight mb-2 animate-fadeInSlideUp delay-200">
+                <span class="block">Nama</span>
+                <span class="block text-blue-600">Anda</span>
+            </h1>
+
+            <!-- Pekerjaan -->
+            <p class="text-xl md:text-2xl text-gray-600 mb-6 animate-fadeInSlideUp delay-300">
+                [Pekerjaan Anda di Sini]
+            </p>
+
+            <!-- Paragraf Singkat / Tagline -->
+            <p class="text-base md:text-lg text-gray-500 max-w-md mb-8 animate-fadeInSlideUp delay-400">
+                "Selamat datang di portofolio saya, tempat ide dan kreativitas bertemu dalam setiap proyek."
+            </p>
+
+            <!-- Bagian "draw or Mine" dan "Card" (Placeholder interaktif) -->
+            <div class="flex flex-col sm:flex-row gap-4 animate-fadeInSlideUp delay-500">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
+                    Lihat Proyek
+                </button>
+                <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
+                    Tentang Saya
+                </button>
+            </div>
+        </div>
+
+        <!-- Area Gambar (Picture of me) -->
+        <div class="flex-1 flex items-center justify-center p-4 lg:p-8">
+            <div class="w-full max-w-sm lg:max-w-md h-64 lg:h-96 bg-gray-200 rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out animate-fadeInSlideUp delay-600">
+                <!-- Placeholder untuk "Picture of me" -->
+                <img src="https://placehold.co/400x400/cccccc/333333?text=Foto+Anda" alt="Foto Profil" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript untuk fungsionalitas Navbar Bubble
+        const navbarToggle = document.getElementById('navbarToggle');
+        const mainNavbar = document.getElementById('mainNavbar');
+
+        navbarToggle.addEventListener('click', () => {
+            mainNavbar.classList.toggle('open');
+            // Mengubah ikon toggle (opsional, bisa diganti dengan SVG ikon X)
+            if (mainNavbar.classList.contains('open')) {
+                navbarToggle.innerHTML = '✕'; // Ikon 'X' saat terbuka
+            } else {
+                navbarToggle.innerHTML = '☰'; // Ikon hamburger saat tertutup
+            }
+        });
+    </script>
+
+</body>
+</html>
